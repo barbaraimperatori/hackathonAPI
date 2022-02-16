@@ -5,10 +5,10 @@ const router = express.Router();
 const bestDevelopers = require("../db.json");
 
 router.get("/hackathons/:id", (req, res) => {
-  let id = req.params.id;
-  console.log(id);
+  let { id } = req.params;
   let response = bestDevelopers.find((item) => item.id == id);
-  res.status(200).json(response);
+  console.log(response.bestDevelopers);
+  res.status(200).json(response.bestDevelopers);
 });
 
 module.exports = router;
