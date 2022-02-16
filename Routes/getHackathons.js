@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const hackathonList = require("../db.json");
+const hackathonList = require("../hackathon.json");
 
 router.get("/hackathons", (req, res) => {
   res.json(hackathonList);

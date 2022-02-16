@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const bestDevelopers = require("../db.json");
+const bestDevelopers = require("../hackathon.json");
 
 router.get("/hackathons/:id", (req, res) => {
   let { id } = req.params;
